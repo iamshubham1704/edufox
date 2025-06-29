@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import connectToDB from '@/lib/mongoose';
-import User from '@/models/User';
+import connectToDB from '../../../lib/mongoose';
+import User from '../../../models/User';
 
 export async function POST(req) {
   try {

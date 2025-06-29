@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { getRandomEmojiAvatar } from "@/utils/generateRandomAvatar";
+import { getRandomEmojiAvatar } from "../../utils/generateRandomAvatar";
 
 export default function QuizPage({ params }) {
   const router = useRouter();

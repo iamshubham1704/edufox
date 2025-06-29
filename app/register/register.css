@@ -1,0 +1,82 @@
+
+.register-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 50px 40px;
+  background: #fffdfd;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+  transition: 0.3s ease;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #026aa7;
+  letter-spacing: 0.5px;
+}
+
+/* Form layout */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs, select, and textarea */
+.register-form input,
+.register-form select,
+.register-form textarea {
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  background-color: #f9f9f9;
+  color: black;
+}
+
+.register-form input:focus,
+.register-form select:focus,
+.register-form textarea:focus {
+  border-color: #0288d1;
+  box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.15);
+  background-color: #fff;
+}
+
+/* Textarea resize */
+.register-form textarea {
+  resize: vertical;
+}
+
+/* Submit button */
+.register-form button {
+  padding: 15px;
+  background: linear-gradient(135deg, #0288d1, #00acc1);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-form button:hover {
+  background: linear-gradient(135deg, #0277bd, #0097a7);
+}
+
+/* Responsive (mobile) */
+@media (max-width: 600px) {
+  .register-container {
+    padding: 30px 20px;
+  }
+
+  .register-title {
+    font-size: 1.8rem;
+  }
+}

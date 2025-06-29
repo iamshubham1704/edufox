@@ -1,0 +1,32 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Quiz {
+  id        String    @id @default(cuid())
+  title     String
+  questions Question[]
+  createdAt DateTime  @default(now())
+}
+
+model Question {
+  id        String   @id @default(cuid())
+  text      String
+  options   String   // store JSON stringified array
+  answer    Int
+  quizId    String
+  quiz      Quiz     @relation(fields: [quizId], references: [id])
+}
+
+model Student {
+  id        String   @id @default(cuid())
+  name      String
+  avatar    String
+  score     Int      @default(0)
+  createdAt DateTime @default(now())
+}
